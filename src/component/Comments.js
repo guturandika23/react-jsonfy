@@ -23,17 +23,27 @@ class Comments extends Component{
         return(
             <div>
                 <nav>
-                    <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo center">Logo</a>
+                    <Mui.AppBar>
+                        <Mui.Toolbar>
+                            <Mui.Typography>
+                    <div class="nav-wrapper red accent-4">
                     <ul class="left hide-on-med-and-down">
                         <li><a href="/">Users</a></li>
                         <li><a href="/Comments">Comments</a></li>
-                        <li class="active"><a href="/Posts">Posts</a></li>
+                        <li><a href="/Posts">Posts</a></li>
+                        <li><a href="/Albums">Albums</a></li>
+                        <li><a href="/Photos">Photos</a></li>
+                        <li><a href="/Categories">Categories</a></li>
+                        <li><a href="/Brands">Brands</a></li>
+                        <li><a href="/Items">Items</a></li>
                     </ul>
                     </div>
-                </nav>
+                    </Mui.Typography>
+                    </Mui.Toolbar>
+                    </Mui.AppBar>
+                    </nav>
                 <Mui.Container Fixed>
-                <h2>Data Json Posts</h2><br/><hr/>
+                <h2>Data Json Comments</h2><br/><hr/>
                 <table>
                     <thead>
                         <tr class="card-panel indigo">

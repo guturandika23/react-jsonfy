@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
 import * as Mui from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-
 
 class Users extends Component{
     constructor(props) {
@@ -32,60 +23,62 @@ class Users extends Component{
         return(
             <div>
                 <nav>
+                    <Mui.AppBar>
+                        <Mui.Toolbar>
+                            <Mui.Typography>
                     <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo center">Logo</a>
                     <ul class="left hide-on-med-and-down">
                         <li><a href="/">Users</a></li>
                         <li><a href="/Comments">Comments</a></li>
-                        <li class="active"><a href="/Posts">Posts</a></li>
+                        <li><a href="/Posts">Posts</a></li>
+                        <li><a href="/Albums">Albums</a></li>
+                        <li><a href="/Photos">Photos</a></li>
+                        <li><a href="/Categories">Categories</a></li>
+                        <li><a href="/Brands">Brands</a></li>
+                        <li><a href="/Items">Items</a></li>
                     </ul>
                     </div>
-                </nav>
+                    </Mui.Typography>
+                    </Mui.Toolbar>
+                    </Mui.AppBar>
+                    </nav>
                 <Mui.Container Fixed>
-                
-                <h2>Data Json Users</h2><br/>
+                <h2>Data Json Users</h2><br/><hr/>
+                <table>
+                    <thead>
+                        <tr class="card-panel indigo">
+                            <td>id</td>
+                            <td>name</td> 
+                            <td>username</td>
+                            <td>email</td> 
+                            <td >pasword</td>
+                            <td>age</td>
+                            <td>website</td>
+                            <td>phone</td>
+                            <td>date_add</td>
+                            <td>date_upd</td>
+                            <td>password_md5</td>
 
-
-                <TableContainer component={Paper}>
-      <Table >
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="left">id</TableCell>
-            <TableCell align="left">name</TableCell>
-            <TableCell align="left">username</TableCell>
-            <TableCell align="left">email</TableCell>
-            <TableCell align="left">password</TableCell>
-            <TableCell align="left">age</TableCell>
-            <TableCell align="left">website</TableCell>
-            <TableCell align="left">phone</TableCell>
-            <TableCell align="left">date_add</TableCell>
-            <TableCell align="left">date_upd</TableCell>
-            <TableCell align="left">password_md5</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-        {data.map(todo =>
-            <TableRow key={todo.id}>
-              <TableCell component="th" scope="row">
-                {todo.id}
-              </TableCell>
-              <TableCell align="left">{todo.id}</TableCell>
-              <TableCell align="left">{todo.name}</TableCell>
-              <TableCell align="left">{todo.username}</TableCell>
-              <TableCell align="left">{todo.email}</TableCell>
-              <TableCell align="left">{todo.password}</TableCell>
-              <TableCell align="left">{todo.age}</TableCell>
-              <TableCell align="left">{todo.website}</TableCell>
-              <TableCell align="left">{todo.phone}</TableCell>
-              <TableCell align="left">{todo.date_add}</TableCell>
-              <TableCell align="left">{todo.date_upd}</TableCell>
-              <TableCell align="left">{todo.password_md5}</TableCell>
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
-    </TableContainer>
+                        </tr>
+                    </thead>
+                    {data.map(todo =>
+                    <tbody>
+                        <tr hey={todo.id}>
+                            <td>{todo.id}</td>
+                            <td>{todo.name}</td> 
+                            <td>{todo.username}</td>
+                            <td>{todo.email}</td>
+                            <td>{todo.pasword}</td>
+                            <td>{todo.age}</td>
+                            <td>{todo.website}</td>
+                            <td>{todo.phone}</td>
+                            <td>{todo.date_add}</td>     
+                            <td>{todo.date_upd}</td>
+                            <td>{todo.password_md5}</td>
+                        </tr>
+                    </tbody>
+                    )}
+                </table>
                 </Mui.Container>
             </div>
         )
